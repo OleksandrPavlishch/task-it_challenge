@@ -1,0 +1,13 @@
+footer
+	.footer_contacts
+		p
+			a(href="tel:"+footer.phone).footer_contacts-phone=footer.phone
+		p
+			a(href="mailto:"+footer.email).footer_contacts-email=footer.email
+	.footer_social
+		include ./../social_buttons/social_buttons
+	.footer_copyright
+		a(href="#").footer_copyright-logo
+			+insert-image('footer-logo.png', 'footer logo')
+		p.footer_copyright-text=footer.copyright_text
+

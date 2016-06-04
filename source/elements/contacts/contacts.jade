@@ -1,0 +1,8 @@
+section.contacts#contacts
+	h2.contacts_header=contacts.header
+	p.contacts_title=contacts.title
+	form(action="#").contacts_form
+		input.contacts_form-name-input(type="text" name="name" required placeholder=contacts.placeholder.name)
+		input.contacts_form-email-input(type="email" name="email" required placeholder=contacts.placeholder.email)
+		textarea.contacts_form-message-textarea(name="message" required placeholder=contacts.placeholder.message)
+		button=contacts.send_button

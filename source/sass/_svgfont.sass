@@ -1,0 +1,44 @@
+@font-face 
+	font-family: "svgfont"
+	src: url('../fonts/svgfont.eot')
+	src: url('../fonts/svgfont.eot?#iefix') format('eot'), url('../fonts/svgfont.woff2') format('woff2'), url('../fonts/svgfont.woff') format('woff'), url('../fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+
+$icon-fb: "\E001"
+$icon-inst: "\E002"
+$icon-left-arrow: "\E003"
+$icon-right-arrow: "\E004"
+$icon-sent-mail: "\E005"
+$icon-tw: "\E006"
+
+
+
+.icon-fb:before
+	content: $icon-fb
+.icon-inst:before
+	content: $icon-inst
+.icon-left-arrow:before
+	content: $icon-left-arrow
+.icon-right-arrow:before
+	content: $icon-right-arrow
+.icon-sent-mail:before
+	content: $icon-sent-mail
+.icon-tw:before
+	content: $icon-tw
+

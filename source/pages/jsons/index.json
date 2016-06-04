@@ -1,0 +1,18 @@
+{
+	"title": "it-challenge_warmup_round"
+	, "contacts": {
+		"header": "Let’s chat!"
+		, "title": "Give us a shout and we will contact you shortly"
+		, "placeholder": {
+			"name": "Name"
+			, "email": "E-Mail"
+			, "message": "Message"
+		}
+		, "send_button": "Send message"
+	}
+	, "footer": {
+		"copyright_text": "© 2016. All rights reserved"
+		, "phone": "+1 2345 6789"
+		, "email": "hello@yourdomain.com"
+	}
+}
