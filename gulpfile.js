@@ -24,7 +24,7 @@ var gulp = require('gulp')
 		'source': {
 			'vendorJs': './source/js/vendor/'
 			, 'vendorCss': './source/css/vendor/'
-			// , 'js': './source/js/**/*.js'
+			, 'favicon': './source/favicon/*.ico'
 			, 'js': './source/views/**/*.js'
 			, 'fonts': './source/fonts/**/*'
 			, 'fontsFolder': './source/fonts/'
@@ -51,6 +51,11 @@ var gulp = require('gulp')
 	};
 
 
+gulp.task('favicon', function() {
+	gulp.src(dirs.source.favicon)
+	.pipe(gulp.dest(dirs.build.build));
+});
+
 gulp.task('connect', function() {
 	connect.server({
 		root: dirs.build.build
@@ -69,7 +74,7 @@ gulp.task('iconfont', function () {
 		fontName: fontname
 		, path: 'source/helpers/_svgfont.sass'
 		, targetPath: '../../' + dirs.source.sassFolder + '_svgfont.sass'
-		, fontPath: '../fonts/'
+		, fontPath: '../../' + dirs.build.fonts
 		, cssClass: 'icon'
 	}))
 	.pipe(plumber())
@@ -82,7 +87,7 @@ gulp.task('iconfont', function () {
 		, fontStyle: 'normal'
 		, fontWeight: 'normal'
 	}))
-	.pipe(gulp.dest(dirs.source.fontsFolder));
+	.pipe(gulp.dest(dirs.build.fonts));
 });
 
 
@@ -213,4 +218,4 @@ gulp.task('watch', function(){
 	gulp.watch(dirs.source.helpers + '*.*', ['iconfont']);
 });
 
-gulp.task('default', ['iconfont', 'fonts', 'vendor-js', 'vendor-css', 'js', 'sprite', 'images', 'templates', 'sass', 'connect', 'watch']);
+gulp.task('default', ['iconfont', 'favicon', 'fonts', 'vendor-js', 'vendor-css', 'js', 'sprite', 'images', 'templates', 'sass', 'connect', 'watch']);
