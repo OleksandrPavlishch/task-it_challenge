@@ -1,4 +1,4 @@
 /source/bower
-/source/fonts/svgfont*
+/source/fonts/svgfont.*
 /node_modules
 /build
