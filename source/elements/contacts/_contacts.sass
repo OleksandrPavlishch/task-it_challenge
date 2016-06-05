@@ -1,0 +1,38 @@
+.contacts
+	@extend %row
+	@extend %side-padding-block
+	background: $free-speech-red 
+	background: $free-speech-red  url(../img/contacts-bg.jpg) 50% 0 no-repeat
+	background-size: cover
+	padding-top: 6.5%
+	padding-bottom: 6.5%
+	text-align: center
+	&-inner
+		@extend %col-6, %col-offset-3
+	&_header
+		color: $white
+		margin-bottom: .5em
+	&_title
+		color: $white
+		margin-bottom: 2.5em
+	&_form
+		font-size: 0
+		&-input-line
+			display: inline-block
+			width: 47%
+			margin-bottom: 22px
+			+max-screen($tablet)
+				display: block
+				width: 100%
+			& + &
+				margin-left: 6%
+				+max-screen($tablet)
+					margin-left: 0
+			input[type="text"],
+			input[type="password"],
+			input[type="email"]
+				width: 100%
+		textarea
+			display: block
+			margin-bottom: 27px
+
