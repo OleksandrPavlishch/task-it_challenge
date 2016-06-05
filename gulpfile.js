@@ -53,6 +53,7 @@ var gulp = require('gulp')
 
 gulp.task('favicon', function() {
 	gulp.src(dirs.source.favicon)
+	.pipe(plumber())
 	.pipe(gulp.dest(dirs.build.build));
 });
 
@@ -70,11 +71,12 @@ var fontname = 'svgfont';
 
 gulp.task('iconfont', function () {
 	return gulp.src([dirs.source.svgFontsAssets])
+	.pipe(plumber())
 	.pipe(iconfontCss({
 		fontName: fontname
 		, path: 'source/helpers/_svgfont.sass'
 		, targetPath: '../../' + dirs.source.sassFolder + '_svgfont.sass'
-		, fontPath: '../../' + dirs.build.fonts
+		, fontPath: '../fonts/'
 		, cssClass: 'icon'
 	}))
 	.pipe(plumber())
@@ -87,7 +89,7 @@ gulp.task('iconfont', function () {
 		, fontStyle: 'normal'
 		, fontWeight: 'normal'
 	}))
-	.pipe(gulp.dest(dirs.build.fonts));
+	.pipe(gulp.dest(dirs.source.fontsFolder));
 });
 
 

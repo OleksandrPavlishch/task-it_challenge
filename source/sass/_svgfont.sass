@@ -12,6 +12,7 @@
 	text-rendering: auto
 	speak: none
 	line-height: 1
+	vertical-align: middle
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 
@@ -20,15 +21,18 @@
 	display: inline-block
 
 
-$icon-fb: "\E001"
-$icon-inst: "\E002"
-$icon-left-arrow: "\E003"
-$icon-right-arrow: "\E004"
-$icon-sent-mail: "\E005"
-$icon-tw: "\E006"
+$icon-arrow-down: "\E001"
+$icon-fb: "\E002"
+$icon-inst: "\E003"
+$icon-left-arrow: "\E004"
+$icon-right-arrow: "\E005"
+$icon-send-mail: "\E006"
+$icon-tw: "\E007"
 
 
 
+.icon-arrow-down:before
+	content: $icon-arrow-down
 .icon-fb:before
 	content: $icon-fb
 .icon-inst:before
@@ -37,8 +41,8 @@ $icon-tw: "\E006"
 	content: $icon-left-arrow
 .icon-right-arrow:before
 	content: $icon-right-arrow
-.icon-sent-mail:before
-	content: $icon-sent-mail
+.icon-send-mail:before
+	content: $icon-send-mail
 .icon-tw:before
 	content: $icon-tw
 
