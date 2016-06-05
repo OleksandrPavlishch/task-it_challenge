@@ -8,4 +8,9 @@ section.contacts#contacts
 			.contacts_form-input-line
 				input.contacts_form-email-input(type="email" name="email" required placeholder=contacts.placeholder.email)
 			textarea.contacts_form-message-textarea(name="message" required placeholder=contacts.placeholder.message)
-			button=contacts.send_button
+				button=contacts.send_button
+				br
+				button.button=contacts.send_button
+				br
+				button.button_send
+					i.icon=contacts.send_button
