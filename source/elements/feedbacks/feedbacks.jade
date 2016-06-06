@@ -2,3 +2,13 @@ section.feedbacks#feedbacks
 	h2.info_header=feedbacks.header
 	.info_description
 		p=feedbacks.description
+	.slider.feedbacks_slider#feedbacks_slider
+		- for (var i = 0; i < 10; ++i)
+			.slider_item.feedbacks_item
+				.feedbacks_item-image
+					+insert-image(feedbacks.item.image, feedbacks.item.name)
+				.feedbacks_item-person
+					.feedbacks_item-person-name=feedbacks.item.name
+					.feedbacks_item-person-who=feedbacks.item.who
+				.feedbacks_item-text=feedbacks.item.text
+		//- ul

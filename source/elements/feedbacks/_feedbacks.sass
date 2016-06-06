@@ -1,2 +1,19 @@
+$feedbacks-image-size: 128px
++min-screen($mdpi)
+	$feedbacks-image-size: 140px
 .feedbacks
 	@extend %col-6
+	// &_slider
+	&_item
+		background-color: $white
+		margin-top: $feedbacks-image-size/2
+		padding: 0 30px 55px
+		&-image
+			overflow: hidden
+			width: $feedbacks-image-size
+			height: $feedbacks-image-size
+			margin: -$feedbacks-image-size/2 auto 0
+			border: 6px solid $solitude
+			border-radius: 50%
+			img
+				width: 100%

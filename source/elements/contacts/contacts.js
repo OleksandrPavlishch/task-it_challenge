@@ -1,5 +1,5 @@
-'use strict';
-(function () {
+// 'use strict';
+// (function () {
 	// var contactsBlock = document.getElementById('contacts')
 	// 	, contactsParallaxBackground = document.getElementById('contacts_parallax_background');
 
@@ -19,4 +19,4 @@
 		// console.log(coor);
 	// };
 	
-})();
+// })();
