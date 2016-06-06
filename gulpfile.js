@@ -25,7 +25,7 @@ var gulp = require('gulp')
 			'vendorJs': './source/js/vendor/'
 			, 'vendorCss': './source/css/vendor/'
 			, 'favicon': './source/favicon/*.ico'
-			, 'js': './source/views/**/*.js'
+			, 'js': './source/elements/**/*.js'
 			, 'fonts': './source/fonts/**/*'
 			, 'fontsFolder': './source/fonts/'
 			, 'jade': './source/pages/*.jade'
