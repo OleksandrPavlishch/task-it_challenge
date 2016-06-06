@@ -27,8 +27,8 @@ input[type="submit"]
 
 %row
 	overflow: hidden
-	> :first-child
-		padding-left: 0
+	// > :first-child
+	// 	padding-left: 0
 
 
 =grid($columns-amount: 12, $col-padding: 5, $column-name: "col-")
@@ -39,13 +39,14 @@ input[type="submit"]
 			box-sizing: border-box
 			display: block
 			padding-left: $col-padding+px
+			padding-right: $col-padding+px
 			min-height: 1px
 			// &:first-child
 			// 	padding-left: 0
 		%#{$column-name}-offset-#{$i}
 			margin-left: (100%/$columns-amount)*$i
 
-+grid($column-name: "col",$col-padding: 30)
++grid($column-name: "col",$col-padding: 15)
 
 // +max-screen($tablet)
 	// +grid($column-name: "col-md", $col-padding: 0)
