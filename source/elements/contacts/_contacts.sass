@@ -11,6 +11,10 @@
 		@extend %col-6, %col-offset-3
 		position: relative
 		z-index: 2
+		+max-screen($mdpi)
+			width: 80%
+			margin: 0 auto
+			float: none
 	&_header
 		color: $white
 		margin-bottom: .5em
