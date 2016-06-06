@@ -1,14 +1,16 @@
 .contacts
 	@extend %row
 	@extend %side-padding-block
-	background: $free-speech-red 
 	background: $free-speech-red  url(../img/contacts-bg.jpg) 50% 0 no-repeat
 	background-size: cover
 	padding-top: 6.5%
 	padding-bottom: 6.5%
 	text-align: center
+	position: relative
 	&-inner
 		@extend %col-6, %col-offset-3
+		position: relative
+		z-index: 2
 	&_header
 		color: $white
 		margin-bottom: .5em
@@ -35,4 +37,3 @@
 		textarea
 			display: block
 			margin-bottom: 27px
-
