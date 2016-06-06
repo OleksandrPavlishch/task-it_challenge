@@ -1,5 +1,16 @@
 {
-	"title": "it-challenge_warmup_round"
+	"feedbacks": {
+		"header": "Feedbacks"
+		, "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos"
+	}
+	, "faq": {
+		"header": "FAQ"
+		, "description": [
+			"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam."
+			, " Aaccusamus et iusto odio dignissimos ducimus qui blanditiis praesentium"
+		]
+	}
+	, "title": "it-challenge_warmup_round"
 	, "contacts": {
 		"header": "Let’s chat!"
 		, "title": "Give us a shout and we will contact you shortly"
