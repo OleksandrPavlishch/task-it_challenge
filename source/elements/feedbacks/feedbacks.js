@@ -1,7 +1,7 @@
 'use strict';
 (function () {
 	$(".feedbacks_slider").owlCarousel({
-		items: 1.5
+		items: 1.2
 		, mouseDrag: false
 		, dots: false
 		, margin: 10
@@ -14,6 +14,10 @@
 				, margin: 0
 				, nav: true
 				, loop: false
+			}
+			, 760: {
+				items: 1.5
+				// , loop: true
 			}
 		}
 	});

@@ -1,12 +1,35 @@
 .feedbacks
 	@extend %col-6
-	// &_slider
+	+max-screen($tablet)
+		margin-bottom: $block-padding
+	+max-screen($mobile)
+		margin-bottom: $block-padding*2
+	&_slider
+		&-wrap
+			@extend %full-width-padding-block-inner
+		+max-screen($tablet)
+			&:before,
+			&:after
+				content: ""
+				height: 100%
+				position: absolute
+				top: 0
+				width: 12%
+				z-index: 2
+			&:before
+				left: -1%
+				background-image: linear-gradient(to right, $solitude, transparent)
+			&:after
+				right: -1%
+				background-image: linear-gradient(to right, transparent, $solitude)
 	&_item
 		background-color: $white
 		margin-top: $feedbacks-image-size/2
 		padding: 0 30px 55px
 		+min-screen($hdpi)
 			margin-top: $hdpi-feedbacks-image-size/2
+		+max-screen($mobile)
+			padding: 0 20px 35px
 		&-image
 			overflow: hidden
 			width: $feedbacks-image-size
@@ -47,6 +70,8 @@
 		+min-screen($hdpi)
 			right: 1vw
 			top: $hdpi-feedbacks-image-size/2 + .7vw
+		+max-screen($tablet)
+			display: none
 	.owl-prev,
 	.owl-next
 		@extend .icon
