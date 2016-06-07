@@ -1,0 +1,11 @@
+.who-we-are
+	@extend %row
+	@extend %full-width-block-with-image
+	&_text
+		@extend %full-width-block-with-image_text
+		padding-left: $block-padding + $base-column-padding
+		padding-right: $base-column-width-with-paddings
+	&_image
+		@extend %full-width-block-with-image_image
+		background:  url("../img/who-we-are-img.jpg") 100% 100% no-repeat
+
