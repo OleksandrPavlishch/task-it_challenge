@@ -5,9 +5,9 @@
 	+max-screen($mobile)
 		margin-bottom: $block-padding*2
 	&_slider
-		&-wrap
-			@extend %full-width-padding-block-inner
 		+max-screen($tablet)
+			&-wrap
+				@extend %full-width-padding-block-inner
 			&:before,
 			&:after
 				content: ""

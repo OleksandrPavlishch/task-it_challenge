@@ -25,6 +25,18 @@ input[type="submit"]
 	padding-left: $block-padding
 	padding-right: $block-padding
 
+%full-width-padding-block-inner
+	width: 100% + $block-padding*2
+	position: relative
+	left: -$block-padding
+
++max-screen($tablet)
+	%full-width-padding-block-inner
+		width: 100% + $block-padding*2
+		position: relative
+		left: -$block-padding
+=
+
 %row
 	overflow: hidden
 	// > :first-child
