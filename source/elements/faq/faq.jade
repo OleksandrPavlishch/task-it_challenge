@@ -3,3 +3,12 @@ section.faq#faq
 	.info_description
 		each val, index in faq.description
 				p=val
+	.faq_accordion
+		each val, index in faq.accordion.headers
+			.faq_accordion-item
+				h3.faq_accordion-item-header=val
+				.faq_accordion-item-text
+					ol
+						each val, index in faq.accordion.item_text
+							li=val
+
