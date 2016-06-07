@@ -84,9 +84,8 @@ input[type="submit"]
 	@extend %row
 	background-color: $white
 	font-size: 0
-	min-height: 30vw
 	display: flex
-	flex-direction: collumn
+	flex-direction: row
 	align-items: stretch
 	&_text
 		flex: 36.5%
@@ -94,5 +93,6 @@ input[type="submit"]
 		padding-bottom: 2vw
 		align-self: center
 	&_image
+		min-height: 30vw
 		flex: 63.5%
-		background-size: cover
+		// background-size: cover
