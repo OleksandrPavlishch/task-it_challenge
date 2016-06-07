@@ -2,22 +2,29 @@
 	display: block
 	background-color: transparent
 	width: 100%
-	cursor: pointer
+	height: 59px
 	border: 1px solid $venetian-red
-	text-align: center
+	font-family: futura, Arial, sans-serif
 	font-weight: 700
 	font-size: 12px
-	height: 59px
 	line-height: 15px
 	padding: 22px 25px
-	font-size: 12px
+	text-align: center
+	text-decoration: none
 	text-transform: uppercase
 	color: $venetian-red
+	cursor: pointer
+	letter-spacing: 3px
+	+min-screen($hdpi)
+		font-size: 16px
+		padding-top: 21px
+		padding-bottom: 21px
 	.icon
 		font-size: 14px
 	&:hover
 		background-color: $venetian-red
 		color: $white
+
 .button_send
 	@extend .button
 	display: inline-block
