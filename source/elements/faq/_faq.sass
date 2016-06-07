@@ -1,2 +1,43 @@
 .faq
 	@extend %col-6
+	&_accordion
+		&-item
+			background-color: $white
+			margin-bottom: 13px
+			font-size: 15px
+			line-height: 1.26
+			cursor: pointer
+			+min-screen($hdpi)
+				font-size: 1vw
+				&+&
+					margin-top: .95vw
+			&-header
+				padding: 15px 45px 15px 29px
+				font-weight: 700
+				font-size: inherit
+				color: $zuccini
+				position: relative
+				&:before,
+				&:after
+					content: ""
+					position: absolute
+					right: 14px
+					top: 50%
+					transition: all .6s ease
+					width: 16px
+					height: 2px
+					background-color: $venetian-red
+					.is-deploy &
+						transform: rotate(180deg)
+				&:after
+					transform: rotate(90deg)
+
+			&-text
+				display: none
+				color: $charcoal
+				ol,
+				ul
+					padding: 10px 50px 34px 29px
+					font-size: inherit
+					list-style-position: inside
+					list-style-type: decimal
