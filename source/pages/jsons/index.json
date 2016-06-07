@@ -1,5 +1,11 @@
-{
-	"feedbacks": {
+{	
+	"what_we_do": {
+		"header": "What we do"
+		, "text": "We Make Forward-Thinking Products.Web, iOS, and the next generation of connected devices. We design and develop software for today’s users and tomorrow’s platforms"
+		, "button_text": "Learn more"
+		, "image": "what-we-do-img.jpg"
+	}
+	,"feedbacks": {
 		"header": "Feedbacks"
 		, "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos"
 		, "item": {

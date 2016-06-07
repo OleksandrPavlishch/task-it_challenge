@@ -1,0 +1,19 @@
+.what-we-do
+	@extend %row
+	background-color: $white
+	font-size: 0
+	min-height: 30vw
+	display: flex
+	flex-direction: collumn
+	align-items: stretch
+	&_text
+		flex: 36.5%
+		padding-right: $block-padding + $base-column-padding
+		padding-left: $base-column-width-with-paddings
+		padding-top: 2vw
+		padding-bottom: 2vw
+		align-self: center
+	&_image
+		flex: 63.5%
+		background:  url("../img/what-we-do-img.jpg") 100% 100% no-repeat
+		background-size: cover

@@ -49,15 +49,15 @@ input[type="submit"]
 			float: left
 			box-sizing: border-box
 			display: block
-			padding-left: $col-padding+%
-			padding-right: $col-padding+%
+			padding-left: $col-padding
+			padding-right: $col-padding
 			min-height: 1px
 			// &:first-child
 			// 	padding-left: 0
 		%#{$column-name}-offset-#{$i}
 			margin-left: (100%/$columns-amount)*$i
 
-+grid($column-name: "col",$col-padding: 1.2)
++grid($column-name: "col",$col-padding: $base-column-padding)
 
 // +max-screen($tablet)
 	// +grid($column-name: "col-md", $col-padding: 0)
