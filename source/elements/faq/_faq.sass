@@ -17,6 +17,8 @@
 				font-size: inherit
 				color: $zuccini
 				position: relative
+				+max-screen($mobile)
+					padding: 15px 35px 15px 15px
 				&:before,
 				&:after
 					content: ""
@@ -27,6 +29,8 @@
 					width: 16px
 					height: 2px
 					background-color: $venetian-red
+					+max-screen($mobile)
+						right: 10px
 					.is-deploy &
 						transform: rotate(180deg)
 				&:after
@@ -35,9 +39,13 @@
 			&-text
 				display: none
 				color: $charcoal
+				padding: 10px 50px 34px 29px
+				+max-screen($mobile)
+					padding: 10px 25px 34px 15px
 				ol,
 				ul
-					padding: 10px 50px 34px 29px
 					font-size: inherit
 					list-style-position: inside
 					list-style-type: decimal
+					li+li
+						margin-top: 10px
