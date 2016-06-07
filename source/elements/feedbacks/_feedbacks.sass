@@ -5,12 +5,35 @@
 		background-color: $white
 		margin-top: $feedbacks-image-size/2
 		padding: 0 30px 55px
+		+min-screen($hdpi)
+			margin-top: $hdpi-feedbacks-image-size/2
 		&-image
 			overflow: hidden
 			width: $feedbacks-image-size
 			height: $feedbacks-image-size
-			margin: -$feedbacks-image-size/2 auto 0
-			border: 6px solid $solitude
+			margin: -$feedbacks-image-size/2 auto 14px
+			border: 7px solid $solitude
 			border-radius: 50%
+			+min-screen($hdpi)
+				width: $hdpi-feedbacks-image-size
+				height: $hdpi-feedbacks-image-size
+				margin: -$hdpi-feedbacks-image-size/2 auto 1vw
 			img
 				width: 100%
+		&-person
+			text-align: center
+			padding: 0 20px
+			&:after
+				content: "‘‘"
+				display: block
+				font-size: 36px
+				font-weight: 900
+				color: $nero-gray
+				line-height: 1
+			&-name
+				color: $black
+			&-name,
+			&-who,
+				@extend %paragraph
+		&-text
+			@extend %paragraph
