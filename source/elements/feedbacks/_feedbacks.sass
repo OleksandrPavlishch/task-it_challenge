@@ -72,6 +72,12 @@
 			top: $hdpi-feedbacks-image-size/2 + .7vw
 		+max-screen($tablet)
 			display: none
+	.owl-item
+		transition: transform .6s ease
+		+max-screen($tablet)
+			transform: scale(0.95);
+			&.active.center
+				transform: scale(1);
 	.owl-prev,
 	.owl-next
 		@extend .icon

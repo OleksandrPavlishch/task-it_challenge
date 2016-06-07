@@ -17,7 +17,7 @@
 			}
 			, 760: {
 				items: 1.5
-				// , loop: true
+				, loop: true
 			}
 		}
 	});
