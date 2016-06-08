@@ -81,17 +81,30 @@ input[type="submit"]
 	display: none !important
 
 %full-width-block-with-image
+	+max-screen($mdpi)
+		padding: 5% $block-padding
 	@extend %row
 	background-color: $white
 	&_info
 		width: calc((100% - #{$block-padding*2}) / 12 * 3)
 		padding: 4% $base-column-padding
+		+max-screen($hdpi)
+			padding: 3% $base-column-padding 2%
+		+max-screen($mdpi)
+			width: 100%
+			float: none
+			padding: 3% 0 0
+			margin: 0
 		&-text
 			margin-bottom: 25px
 	&_image
 		overflow: hidden
 		width: calc((100% - #{$block-padding*2}) / 12 * 8 + #{$block-padding})
 		padding: 0
+		+max-screen($mdpi)
+			width: 100%
+			float: none
+			padding: 0
 		img
 			width: 100%
 			min-height: 100%
