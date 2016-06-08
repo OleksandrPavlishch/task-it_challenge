@@ -1,12 +1,24 @@
 .what-we-do
 	@extend %row
-	@extend %full-width-block-with-image
-	&_text
-		@extend %full-width-block-with-image_text
-		padding-right: $block-padding + $base-column-padding
-		padding-left: $base-column-width-with-paddings
+	background-color: $white
+	&_info
+		width: calc((100% - #{$block-padding*2}) / 12 * 3)
+		margin-right: $block-padding
+		float: right
+		padding: 4% $base-column-padding
+		&-header
+			@extend %info-header
+		&-button
+			@extend .button
+		&-text
+			margin-bottom: 25px
 	&_image
-		@extend %full-width-block-with-image_image
-		background:  url("../img/what-we-do-img.jpg") 50% 50% no-repeat
-		background-size: cover
+		overflow: hidden
+		float: left
+		width: calc((100% - #{$block-padding*2}) / 12 * 8 + #{$block-padding})
+		padding: 0
+		img
+			width: 100%
+			min-height: 100%
+			vertical-align: middle
 
