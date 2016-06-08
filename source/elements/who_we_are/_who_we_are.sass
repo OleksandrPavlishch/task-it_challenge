@@ -1,12 +1,16 @@
 .who-we-are
-	@extend %row
 	@extend %full-width-block-with-image
-	&_text
-		@extend %full-width-block-with-image_text
-		padding-left: $block-padding + $base-column-padding
-		padding-right: $base-column-width-with-paddings
+	&_info
+		@extend %full-width-block-with-image_info
+		float: left
+		margin-left: $block-padding
+		&-header
+			@extend %info-header
+		&-button
+			@extend .button
+		&-text
+			@extend %full-width-block-with-image_info-text
 	&_image
 		@extend %full-width-block-with-image_image
-		background:  url("../img/who-we-are-img.jpg") 50% 50% no-repeat
-		background-size: cover
+		float: right
 
