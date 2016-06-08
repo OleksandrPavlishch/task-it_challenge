@@ -1,5 +1,12 @@
-{	
-	"who_we_are": {
+{	"progects": {
+		"header": "our best projects"
+		, "title": "We are a full-service cretive studio delivering any kind of visual content and digital solutions"
+		, "slider":{
+			"title": "Project Title two"
+			, "type": "Web site, e-commerce"
+		}
+	}
+	, "who_we_are": {
 		"header": "Who we are"
 		, "text": "We are a team of highly qualified enthusiasts in the applied psychology and behavioural economics fields. We provide companies and individuals with innovative approaches and methods in personal, team and organisational development."
 		, "button_text": "Learn more"
