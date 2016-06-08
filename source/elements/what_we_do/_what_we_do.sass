@@ -1,11 +1,9 @@
 .what-we-do
-	@extend %row
-	background-color: $white
+	@extend %full-width-block-with-image
 	&_info
-		width: calc((100% - #{$block-padding*2}) / 12 * 3)
-		margin-right: $block-padding
+		@extend %full-width-block-with-image_info
 		float: right
-		padding: 4% $base-column-padding
+		margin-right: $block-padding
 		&-header
 			@extend %info-header
 		&-button
@@ -13,12 +11,5 @@
 		&-text
 			margin-bottom: 25px
 	&_image
-		overflow: hidden
+		@extend %full-width-block-with-image_image
 		float: left
-		width: calc((100% - #{$block-padding*2}) / 12 * 8 + #{$block-padding})
-		padding: 0
-		img
-			width: 100%
-			min-height: 100%
-			vertical-align: middle
-
