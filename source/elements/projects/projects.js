@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-	$(".progects_slider").owlCarousel({
+	$(".projects_slider").owlCarousel({
 		items: 1.2
 		, dots: false
 		, loop: true
@@ -16,7 +16,7 @@
 		}
 	});
 
-	$(".progects_slider-item-images").owlCarousel({
+	$(".projects_slider-item-images").owlCarousel({
 		items: 1
 		, mouseDrag: false
 		, dots: false
