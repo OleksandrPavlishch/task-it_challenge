@@ -112,10 +112,12 @@
 						background-color: $nero-gray
 						color: $white
 						transition: all .4s ease
-						opacity: 0
 						&:hover
 							background-color: $white
 							color: $nero-gray
+						&.disabled
+							opacity: .5
+							cursor: default
 						+max-screen($tablet)
 							display: none
 					.owl-prev
@@ -131,7 +133,6 @@
 					.owl-next
 						margin-left: 0
 						margin-right: 0
-						opacity: 1
 				img
 					transition: all .4s ease
 					margin-top: -8%
@@ -150,12 +151,17 @@
 				bottom: 0
 				left: 0
 				overflow: hidden
-				height: 22.5%
+				height: 26%
 				background-color: $white
 				width: 100%
+				padding: 4% 5%
 				+max-screen($tablet)
-					bottom: -22.5%
+					bottom: -26%
 			&:hover &-info
-				bottom: -22.5%
-			&-name
-			&-type
+				bottom: -26%
+			// &-name
+				// font-weight: 700
+				// font-size: 14px
+				// text-transform: uppercase
+				// color: $black
+			// &-type

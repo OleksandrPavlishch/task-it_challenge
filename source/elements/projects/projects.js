@@ -5,6 +5,7 @@
 		, navContainerClass: "projects_slider-nav"
 		, navText: ''
 		, nav: false
+		, mouseDrag: false
 		, responsive: {
 			1440: {
 				items: 5
@@ -36,7 +37,7 @@
 		, mouseDrag: false
 		, touchDrag: false
 		, dots: false
-		, loop: true
+		// , loop: false
 		, navText: ''
 		, nav: true
 		, navContainerClass: "projects_slider-item-images-nav"
