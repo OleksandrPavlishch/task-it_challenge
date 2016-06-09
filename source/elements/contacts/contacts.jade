@@ -4,10 +4,10 @@ section.contacts#contacts
 		p.contacts_title=contacts.title
 		form(action="#").contacts_form
 			.contacts_form-input-line
-				input.contacts_form-name-input(type="text" name="name" required placeholder=contacts.placeholder.name)
+				input.contacts_form-name-input(type="text" name="name" required placeholder=contacts.placeholder.name title="Please enter you "+contacts.placeholder.name.toLowerCase())
 			.contacts_form-input-line
-				input.contacts_form-email-input(type="email" name="email" required placeholder=contacts.placeholder.email)
-			textarea.contacts_form-message-textarea(name="message" required placeholder=contacts.placeholder.message)
+				input.contacts_form-email-input(type="email" name="email" required placeholder=contacts.placeholder.email title="Please enter you "+contacts.placeholder.email.toLowerCase())
+			textarea.contacts_form-message-textarea(name="message" required placeholder=contacts.placeholder.message title="Please enter you "+contacts.placeholder.message.toLowerCase())
 			button.button_send(type="submit")
-				i.icon.icon-send-mail
+				em.icon.icon-send-mail
 				|#{contacts.send_button}

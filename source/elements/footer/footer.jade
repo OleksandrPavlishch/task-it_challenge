@@ -1,7 +1,7 @@
 footer
 	.footer_contacts
 		p
-			a(href="tel:"+footer.phone).footer_contacts-phone=footer.phone
+			a(href="tel:"+footer.phone.replace(/ /g,'')).footer_contacts-phone=footer.phone
 		p
 			a(href="mailto:"+footer.email).footer_contacts-email=footer.email
 	.footer_social
