@@ -3,14 +3,14 @@ section.projects#projects
 	p.projects_title=projects.title
 	.projects_slider
 		- for (var i = 0; i < 12; ++i)
-			.projects_slider-item
-				.projects_slider-item-inner
-					.projects_slider-item-images
-						- for (var j = 0; j < 4; ++j)
-							if 1+i+j < 5
-								+insert-image('project' + (i+j) + '.jpg' , projects.slider.name[i%4])
-							else
-								+insert-image('project' + (i+j)%4 + '.jpg' , projects.slider.name[i%4])
-					.projects_slider-item-info
-						h3.projects_slider-item-name=projects.slider.name[i%4]
-						p.projects_slider-item-type=projects.slider.type
+			+project-item(i)
+
+mixin project-item(index)
+	.projects_slider-item
+		.projects_slider-item-inner
+			.projects_slider-item-images
+				- for (var j = 0; j < 4; ++j)
+					+insert-image('project' + (1 + (index + j)%4) + '.jpg' , projects.slider.name[(index + j)%4])
+			.projects_slider-item-info
+				h3.projects_slider-item-name=projects.slider.name[(index + j)%4]
+				p.projects_slider-item-type=projects.slider.type
