@@ -1,8 +1,14 @@
-{	"progects": {
+{
+	"progects": {
 		"header": "our best projects"
 		, "title": "We are a full-service cretive studio delivering any kind of visual content and digital solutions"
 		, "slider":{
-			"title": "Project Title two"
+			"name": [
+				"Project Title one"
+				, "Project Title two"
+				, "Project Title three"
+				, "Project Title four"
+			]
 			, "type": "Web site, e-commerce"
 		}
 	}
