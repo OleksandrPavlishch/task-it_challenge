@@ -1,18 +1,29 @@
 'use strict';
 (function () {
 	$(".projects_slider").owlCarousel({
-		items: 1.2
-		, dots: false
+		dots: false
 		, loop: true
 		, navContainerClass: "projects_slider-nav"
 		, navText: ''
+		, nav: false
+		, center: true
 		, responsive: {
-			1026: {
+			1440: {
+				items: 5
+			}
+			, 1026: {
 				items: 4
 				, nav: true
+				, margin: 0
+				, center: false
 			}
 			, 760: {
-				items: 3
+				items: 2
+				, margin: 20
+			}
+			, 320: {
+				items: 1.4
+				, margin: 10
 			}
 		}
 	});

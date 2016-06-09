@@ -114,3 +114,20 @@ input[type="submit"]
 			width: 100%
 			min-height: 100%
 			vertical-align: middle
+
++max-screen($tablet)
+	%gray-side-gradient-block
+		&:before,
+		&:after
+			content: ""
+			height: 100%
+			position: absolute
+			top: 0
+			width: 10%
+			z-index: 3
+		&:before
+			left: -1%
+			background-image: linear-gradient(to right, $solitude, transparent)
+		&:after
+			right: -1%
+			background-image: linear-gradient(to right, transparent, $solitude)
