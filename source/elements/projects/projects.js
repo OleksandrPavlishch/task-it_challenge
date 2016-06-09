@@ -4,6 +4,7 @@
 		items: 1.2
 		, dots: false
 		, loop: true
+		, navContainerClass: "projects_slider-nav"
 		, navText: ''
 		, responsive: {
 			1026: {

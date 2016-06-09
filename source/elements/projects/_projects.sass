@@ -22,8 +22,84 @@
 	&_slider
 		position: relative
 		overflow: hidden
+		padding-top: 3%
+		padding-bottom: 7%
+		.owl-stage-outer
+			z-index: 2
+			position: relative
+		&-nav
+			.owl-prev,
+			.owl-next
+				position: absolute
+				top: 0
+				z-index: 1
+				cursor: pointer
+				width: 70px
+				height: 10px
+				&:before,
+				&:after
+					content: ''
+					position: absolute
+				&:before
+					top: 4px
+					left: 0
+					width: 100%
+					height: 2px
+					background-color: $aluminium
+			.owl-prev
+				left: $block-padding
+				&:after
+					+arr(8, 8, $aluminium, l)
+					top: 1px
+					right: 100%
+			.owl-next
+				right: $block-padding
+				&:after
+					+arr(8, 8, $aluminium, r)
+					top: 1px
+					left: 100%
 		&-item
-			overflow: hidden
+			padding-top: 71.5%
+			position: relative
+			&-inner
+				position: absolute
+				transition: all .4s ease
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				+gh($free-speech-red, $zuccini)
+			&:hover &-inner
+				height: 120%
+				margin-top: -8%
+
 			&-images
 				overflow: hidden
-				height: 350px
+				position: absolute
+				z-index: 2
+				left: 0
+				top: 0
+				height: 100%
+				width: 100%
+				img
+					transition: all .4s ease
+					margin-top: -8%
+					max-width: 112%
+					// height: 100%
+					// max-height: 100%
+			&:hover img
+				margin-top: 0
+			&-info
+				position: absolute
+				transition: all .5s ease
+				z-index: 1
+				bottom: 0
+				left: 0
+				overflow: hidden
+				height: 22.5%
+				background-color: $white
+				width: 100%
+			&:hover &-info
+				bottom: -22.5%
+			&-name
+			&-type
