@@ -89,7 +89,7 @@ input[type="submit"]
 		margin: 10px 0
 	background-color: $white
 	&_info
-		width: calc((100% - #{$block-padding*2}) / 12 * 3)
+		width: (100% - $block-padding*2) / 12 * 3
 		padding: 4% $base-column-padding
 		+max-screen($hdpi)
 			padding: 3% $base-column-padding 2%
@@ -104,7 +104,7 @@ input[type="submit"]
 			margin-bottom: 25px
 	&_image
 		overflow: hidden
-		width: calc((100% - #{$block-padding*2}) / 12 * 8 + #{$block-padding})
+		width: (100% - $block-padding*2) / 12 * 8 + $block-padding
 		padding: 0
 		+max-screen($mdpi)
 			width: 100%
