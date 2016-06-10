@@ -24,7 +24,7 @@
 				, center: true
 				, loop: true
 			}
-			, 320: {
+			, 300: {
 				items: 1.4
 				, margin: 10
 				, center: true

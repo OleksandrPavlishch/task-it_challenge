@@ -52,7 +52,7 @@
 				, mouseDrag: false
 				, nav: true
 			}
-			, 320: {
+			, 300: {
 				items: 1.2
 			}
 		}
