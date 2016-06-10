@@ -6,6 +6,7 @@
 		, navText: ''
 		, nav: false
 		, mouseDrag: false
+		, smartSpeed: 1000
 		, responsive: {
 			1440: {
 				items: 5

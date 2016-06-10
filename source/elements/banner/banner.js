@@ -44,6 +44,7 @@
 		, onTranslated: changeArrowPreview
 		, autoplay: true
 		, autoplayTimeout: 7000
+		, smartSpeed: 1500
 		, autoplayHoverPause: true
 		, responsive: {
 			1026: {

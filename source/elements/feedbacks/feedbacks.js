@@ -8,6 +8,7 @@
 		, center: true
 		, loop: true
 		, navText: ''
+		, smartSpeed: 600
 		, responsive: {
 			1026: {
 				items: 1
