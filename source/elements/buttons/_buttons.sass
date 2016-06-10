@@ -78,3 +78,65 @@
 	100%
 		opacity: 1
 		transform: translateY(0px)
+
+.toggle-menu-button
+	width: 36px
+	height: 21px
+	position: relative
+	display: inline-block
+	cursor: pointer
+	float: right
+	background-color: transparent
+	margin-top: 21px
+	&-lines
+		cursor: pointer
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		height: 3px
+		margin: auto
+		width: 100%
+		background-color: $white
+		transition: all .4s ease
+		.is-scroll &
+			background-color: $black
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			width: 100%
+			left: 0
+			height: 3px
+			background-color: $white
+			transition: all .4s ease
+			.is-scroll &
+				background-color: $black
+		&:before
+			top: -9px
+		&:after
+			bottom: -9px
+	&:hover &-lines
+		background-color: $venetian-red
+		&:before,
+		&:after
+			background-color: $venetian-red
+	.is-menu-show &
+		&-lines
+			background-color: transparent
+			&:before,
+			&:after
+				background-color: $charcoal
+			&:before
+				top: 0
+				transform: rotate(-45deg)
+			&:after
+				bottom: 0
+				transform: rotate(45deg)
+	.is-menu-show &:hover &-lines
+		background-color: transparent
+		&:before,
+		&:after
+			background-color: $suva-grey
+
