@@ -96,36 +96,18 @@
 				&-nav
 					.owl-prev,
 					.owl-next
-						@extend .icon
-						position: absolute
-						top: 50%
 						width: 36px
 						height: 36px
-						text-align: center
 						line-height: 36px
 						margin-top: -18px
-						cursor: pointer
 						font-size: 12px
-						background-color: $nero-gray
-						color: $white
-						transition: all .4s ease
-						&:hover
-							background-color: $white
-							color: $nero-gray
-						&.disabled
-							opacity: .5
-							cursor: default
-							background-color: $nero-gray
-							color: $white
 						+max-screen($tablet)
 							display: none
 					.owl-prev
-						@extend .icon-left-arrow
-						left: 0
+						@extend %default-prev-slider-button
 						margin-left: -36px
 					.owl-next
-						@extend .icon-right-arrow
-						right: 0
+						@extend %default-next-slider-button
 						margin-right: -36px
 				&:hover &-nav
 					.owl-prev,

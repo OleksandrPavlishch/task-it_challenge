@@ -12,3 +12,36 @@
 
 .owl-item
 	@extend .slider_item
+
+%default-slider-button
+	@extend .icon
+	position: absolute
+	top: 50%
+	text-align: center
+	cursor: pointer
+	background-color: $nero-gray
+	color: $white
+	transition: all .4s ease
+	&:hover
+		background-color: $white
+		color: $nero-gray
+	&.disabled
+		opacity: .5
+		cursor: default
+		background-color: $nero-gray
+		color: $white
+	&.disabled
+		opacity: .5
+		cursor: default
+		background-color: $nero-gray
+		color: $white
+
+%default-prev-slider-button
+	@extend %default-slider-button
+	@extend .icon-left-arrow
+	left: 0
+
+%default-next-slider-button
+	@extend %default-slider-button
+	@extend .icon-right-arrow
+	right: 0
