@@ -1,7 +1,7 @@
 'use strict';
 (function () {
 
-	var $scrollLinks = $('.button_start')
+	var $scrollLinks = $('.button_start, .logo')
 		, $htmlBody = $('html, body')
 		, $body = $('body')
 		, topBlockId = '#header'

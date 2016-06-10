@@ -1,0 +1,24 @@
+header
+	@extend %side-padding-block
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+	padding-top: 18px
+	width: 100%
+	height: 66px
+	line-height: 66px
+	transition: all .4s ease
+	.is-scroll &
+		padding-top: 0
+		background-color: $white
+	.logo
+		font-family: megrim, futura, Arial, sans-serif
+		font-size: 24px
+		text-decoration: none
+		cursor: pointer
+		color: $white
+		line-height: 1
+		text-transform: uppercase
+		.is-scroll &
+			color: $black
