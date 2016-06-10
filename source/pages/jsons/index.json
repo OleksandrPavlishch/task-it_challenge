@@ -1,5 +1,8 @@
 {
-	"baner": {
+	"header": {
+		"logo": "hot  peppers"
+	}
+	, "baner": {
 		"header": "Project Title #"
 		, "title": [
 			"A creative agency that crafts innovative ideas into digital products!"
