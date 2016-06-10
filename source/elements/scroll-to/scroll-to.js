@@ -15,9 +15,6 @@
 			, section = $body.find(link)
 			, headerHeight = (link !== topBlockId) ? $header.height() : 0;
 
-			console.log(link);
-			console.log(headerHeight);
-
 		if(section.length){
 			$htmlBody.animate({scrollTop: section.offset().top - headerHeight}, 1000);
 			return;
