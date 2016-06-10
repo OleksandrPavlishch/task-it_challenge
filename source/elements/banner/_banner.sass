@@ -37,6 +37,7 @@
 			&:hover &-arrow
 				background-color: $nero-gray
 				color: $white
+
 		&-prev-button
 			left: 0
 			&-arrow
@@ -46,7 +47,9 @@
 			&-arrow
 				@extend %default-next-slider-button-reverse-color
 
-		
+		&-prev-button:hover &-button-preview,
+		&-next-button:hover &-button-preview
+			margin: 0
 		&-button-preview
 			background-color: $nero
 			height: 100%
@@ -54,13 +57,14 @@
 			width: $banner-slider-button-preview-width
 			cursor: pointer
 			overflow: hidden
+			transition: all .6s ease
 			.disabled + &
 				display: none
 			&-image
 				position: absolute
 				top: 0
 				height: 100%
-				width: $banner-slider-button-preview-width
+				width: $banner-slider-button-preview-image-width
 				background-repeat: no-repeat
 				background-position: 50% 50%
 				background-size: cover
