@@ -1,6 +1,10 @@
 'use strict';
 (function () {
-	$(".banner_slider").owlCarousel({
+	var $bannerSlider = $(".banner_slider")
+	, $bannerSliderPrevButton = $(".banner_slider-prev-button")
+	, $bannerSliderNextButton = $(".banner_slider-next-button");
+
+	$bannerSlider.owlCarousel({
 		items: 1
 		, mouseDrag: false
 		, dots: false
@@ -15,4 +19,16 @@
 			}
 		}
 	});
+
+
+	$bannerSliderNextButton.on('click', function(event) {
+		event.preventDefault();
+		$bannerSlider.trigger('next.owl.carousel');
+	});
+
+	$bannerSliderPrevButton.on('click', function(event) {
+		event.preventDefault();
+		$bannerSlider.trigger('prev.owl.carousel');
+	});
+
 })();

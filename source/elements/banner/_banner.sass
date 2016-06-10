@@ -18,6 +18,19 @@
 		.owl-stage,
 		.owl-item
 			height: 100%
+		&-prev-button,
+		&-next-button
+			width: 66px
+			height: 66px
+			margin-top: -33px
+			line-height: 66px
+			font-size: 28px
+			+max-screen($tablet)
+				display: none
+		&-prev-button
+			@extend %default-prev-slider-button-reverse-color
+		&-next-button
+			@extend %default-next-slider-button-reverse-color
 		&-item
 			height: 100%
 			position: relative

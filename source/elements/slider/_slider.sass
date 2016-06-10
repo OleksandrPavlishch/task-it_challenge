@@ -21,15 +21,11 @@
 	cursor: pointer
 	background-color: $nero-gray
 	color: $white
+	z-index: 3
 	transition: all .4s ease
 	&:hover
 		background-color: $white
 		color: $nero-gray
-	&.disabled
-		opacity: .5
-		cursor: default
-		background-color: $nero-gray
-		color: $white
 	&.disabled
 		opacity: .5
 		cursor: default
@@ -43,5 +39,29 @@
 
 %default-next-slider-button
 	@extend %default-slider-button
+	@extend .icon-right-arrow
+	right: 0
+
+
+%default-slider-button-reverse-color
+	@extend %default-slider-button
+	background-color: $white
+	color: $nero-gray
+	&:hover
+		background-color: $nero-gray
+		color: $white
+	&.disabled
+		opacity: .5
+		cursor: default
+		background-color: $white
+		color: $nero-gray
+
+%default-prev-slider-button-reverse-color
+	@extend %default-slider-button-reverse-color
+	@extend .icon-left-arrow
+	left: 0
+
+%default-next-slider-button-reverse-color
+	@extend %default-slider-button-reverse-color
 	@extend .icon-right-arrow
 	right: 0
