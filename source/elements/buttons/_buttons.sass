@@ -88,6 +88,11 @@
 	float: right
 	background-color: transparent
 	margin-top: 21px
+	+max-screen($mobile)
+		margin-top: 15px
+		width: 30px
+	+landscape-max-screen($mobile)
+		margin-top: 11px
 	&-lines
 		cursor: pointer
 		position: absolute
@@ -102,6 +107,8 @@
 		transition: all .4s ease
 		.is-scroll &
 			background-color: $black
+		+max-screen($tablet)
+			background-color: $black
 		&:before,
 		&:after
 			content: ""
@@ -113,6 +120,8 @@
 			transition: all .4s ease
 			.is-scroll &
 				background-color: $black
+			+max-screen($tablet)
+				background-color: $black
 		&:before
 			top: -9px
 		&:after
@@ -122,6 +131,11 @@
 		&:before,
 		&:after
 			background-color: $venetian-red
+		+max-screen($tablet)
+			background-color: $black
+			&:before,
+			&:after
+				background-color: $black
 	.is-menu-show &
 		&-lines
 			background-color: transparent
