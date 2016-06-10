@@ -25,9 +25,6 @@
 	&_navigation
 		padding: 24% 0 16%
 		overflow-y: auto
-		height: 100%
-		+max-screen($mobile)
-			height: auto
 		+landscape-max-screen($mobile)
 			padding: 4% 0 0
 			width: 50%
@@ -35,7 +32,7 @@
 		&-line
 			display: block
 			& + &
-				margin-top: 25%
+				margin-top: 20%
 				+landscape-max-screen($tablet)
 					margin-top: 15%
 				+max-screen($mobile)

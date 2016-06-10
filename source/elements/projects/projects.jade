@@ -10,7 +10,8 @@ mixin project-item(index)
 		.projects_slider-item-inner
 			.projects_slider-item-images
 				- for (var j = 0; j < 4; ++j)
-					+insert-image('project' + (1 + (index + j)%4) + '.jpg' , projects.slider.name[(index + j)%4])
-			.projects_slider-item-info
+					a(href="#")
+						+insert-image('project' + (1 + (index + j)%4) + '.jpg' , projects.slider.name[(index + j)%4])
+			a(href="#").projects_slider-item-info
 				h3.projects_slider-item-name=projects.slider.name[(index + j)%4]
 				p.projects_slider-item-type=projects.slider.type

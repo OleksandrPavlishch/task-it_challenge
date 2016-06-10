@@ -1,0 +1,121 @@
+$loader-count: 5
+
+$num: 16
+$size: 20px
+$spread: 150px
+
+$color: #7f0
+
+$speed: 3s
+$tail: 1
+
+@keyframes spin
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+
+@keyframes change-text-color
+	0%
+		color: $color
+	50%
+		color: #3aaccd
+	100%
+		color: #fe003e
+
+
+=color-tail($color, $num, $i)
+	@keyframes change-loader-color#{$i}
+		0%
+			background-color: lighten($color, 40 / $num * $i)
+		50%
+			background-color: lighten(#3aaccd, 40 / $num * $i)
+		100%
+			background-color: lighten(#fe003e, 40 / $num * $i)
+
+	animation: change-loader-color#{$i} 9s ease infinite
+
+.preloader
+	position: fixed
+	z-index: 1000
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: black
+	&_inner
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		margin: auto
+		width: 60%
+		height: 45%
+		+max-screen($tablet)
+			text-align: center
+			height: 30%
+		+max-screen($mobile)
+			height: 75%
+		+portrait-max-screen($mobile)
+			height: 55%
+	&_text
+		// color: $white
+		font-family: megrim, futura, Arial, sans-serif
+		font-size: 24px
+		font-size: 6vw
+		line-height: 1
+		width: 70%
+		height: 6vw
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		margin: auto 0
+		animation: change-text-color 9s ease infinite
+		+max-screen($tablet)
+			position: relative
+			width: 100%
+			height: auto
+			margin-bottom: 20%
+		+portrait-max-screen($tablet)
+			font-size: 10vw
+	&_item
+		position: absolute
+		top: 50%
+		left: 50%
+		animation: spin ($speed * 1.5 * $loader-count) linear infinite
+		&-dot
+			width: $spread
+			margin: 0 (- $spread / 2)
+			&:after
+				content: ''
+				display: block
+				width: $size
+				height: $size
+				position: absolute
+				border-radius: 100%
+			@for $i from 1 through $num
+				$c: (1 / $num * $i)
+				&:nth-child(#{$i})
+					animation: spin $speed (- $c * .2s * $tail) ease infinite
+					&:after
+						// animation: change-loader-color 12s ease-in infinite
+						// background: lighten($color, 40 / $num * $i)
+						+color-tail($color, $num, $i)
+						transform: scale(#{$c})
+		@for $i from 1 through $loader-count
+			&:nth-child(#{$i})
+				animation-delay: ($speed * -1.5 * $i)
+		&-wraper
+			float: right
+			display: inline-block
+			position: relative
+			height: 100%
+			width: 30%
+			+max-screen($tablet)
+				width: 40%
+				height: 40%
+				float: none
+
