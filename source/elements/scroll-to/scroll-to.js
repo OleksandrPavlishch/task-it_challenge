@@ -5,6 +5,7 @@
 		, $htmlBody = $('html, body')
 		, $body = $('body')
 		, topBlockId = '#banner'
+		, menuShowClass = 'is-menu-show'
 		, $header = $('header');
 
 	$scrollLinks.on('click', function(event) {
@@ -17,6 +18,7 @@
 
 		if(section.length){
 			$htmlBody.animate({scrollTop: section.offset().top - headerHeight}, 1000);
+			$body.removeClass(menuShowClass);
 			return;
 		}
 	});
