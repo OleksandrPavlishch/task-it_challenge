@@ -31,12 +31,6 @@
 		$bannerSliderNextButtonPreviewName.text(nextHeader);
 		$bannerSliderNextButtonPreviewTitle.text(nextTitle);
 
-		console.log(nextImageUrl);
-		console.log(prevImageUrl);
-		console.log(nextHeader);
-		console.log(prevHeader);
-		console.log(nextTitle);
-		console.log(prevTitle);
 	};
 
 	$bannerSlider.owlCarousel({
