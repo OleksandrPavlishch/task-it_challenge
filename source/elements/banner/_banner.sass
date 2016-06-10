@@ -1,8 +1,9 @@
 .banner
 	height: 100%
 	overflow: hidden
-	background-color: $black
 	position: relative
+	+max-screen($tablet)
+		margin-bottom: 30px
 	&_slider
 		@extend .slider
 		height: 100%
@@ -31,10 +32,17 @@
 			@extend %default-prev-slider-button-reverse-color
 		&-next-button
 			@extend %default-next-slider-button-reverse-color
+		.owl-item
+			transition: transform .6s ease
+			+max-screen($tablet)
+				transform: scale(0.9);
+				&.active.center
+					transform: scale(1);
 		&-item
 			height: 100%
 			position: relative
 			width: 100%
+			background-color: $black
 			&-image
 				position: absolute
 				width: 100%
@@ -67,7 +75,7 @@
 				+max-screen($mobile)
 					height: 40%
 				+landscape-max-screen($mobile)
-					height: 80%
+					height: 60%
 				&-header
 					color: $white
 					margin-bottom: 30px
@@ -75,7 +83,8 @@
 						font-size: 30px
 						font-size: 8vw
 					+landscape-max-screen($mobile)
-						margin-bottom: 20px
+						margin-bottom: 15px
+						font-size: 25px
 				&-title
 					color: $white
 					font-size: 24px
@@ -88,4 +97,4 @@
 					+min-screen($hdpi)
 						font-size: 1.5vw
 					+landscape-max-screen($mobile)
-						margin-bottom: 20px
+						margin-bottom: 15px

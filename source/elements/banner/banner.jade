@@ -5,7 +5,7 @@ section.banner#banner
 		.banner_slider
 			- for (var i = 0; i < 10; ++i)
 				.banner_slider-item
-					.banner_slider-item-image(style='background-image: url("img/banner-image.jpg")')
+					.banner_slider-item-image(style='background-image: url("img/banner-image'+ (1+i%2) +'.jpg")')
 						//- +insert-image('banner-image.jpg', projects.slider.name[i%4])
 					.banner_slider-item-text
 						h1.banner_slider-item-text-header=baner.header+(1+i)

@@ -17,6 +17,10 @@
 				, mouseDrag: false
 				, nav: true
 			}
+			, 320: {
+				items: 1.2
+				// , margin: 5
+			}
 		}
 	});
 
