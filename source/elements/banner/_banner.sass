@@ -66,12 +66,16 @@
 					width: 90%
 				+max-screen($mobile)
 					height: 40%
+				+landscape-max-screen($mobile)
+					height: 80%
 				&-header
 					color: $white
 					margin-bottom: 30px
 					+max-screen($mobile)
 						font-size: 30px
 						font-size: 8vw
+					+landscape-max-screen($mobile)
+						margin-bottom: 20px
 				&-title
 					color: $white
 					font-size: 24px
@@ -83,3 +87,5 @@
 						font-size: 16px
 					+min-screen($hdpi)
 						font-size: 1.5vw
+					+landscape-max-screen($mobile)
+						margin-bottom: 20px
