@@ -3,7 +3,7 @@ header
 	position: fixed
 	top: 0
 	left: 0
-	z-index: 10
+	z-index: 15
 	padding-top: 18px
 	width: 100%
 	height: $default-header-height
@@ -30,6 +30,8 @@ header
 		color: $white
 		line-height: 1
 		text-transform: uppercase
+		+min-screen($hdpi)
+			font-size: 1.5vw
 		+max-screen($mobile)
 			font-size: 20px
 		.is-scroll &

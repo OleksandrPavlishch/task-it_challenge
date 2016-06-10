@@ -1,1 +1,8 @@
 aside.menu#menu
+	nav.menu_navigation
+		ul.menu_navigation-list
+			each val, index in menu
+				li.menu_navigation-line
+					a.menu_navigation-link(href="#"+val.link)=val.name
+
+	include ../social_buttons/social_buttons

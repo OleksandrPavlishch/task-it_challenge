@@ -1,0 +1,36 @@
+.menu
+	position: fixed
+	right: 0
+	top: 0
+	padding-top: $default-header-height
+	padding-left: $base-column-width-with-paddings - $base-column-padding
+	padding-right: $block-padding
+	height: 100%
+	min-width: 35%
+	background-color: $nero-gray
+	z-index: 10
+	margin-right: -35%
+	transition: all .4s ease
+	+max-screen($mobile)
+		padding-top: $mobile-header-height
+	+landscape-max-screen($mobile)
+		padding-top: $mobile-landscape-header-height
+	.is-menu-show &
+		margin-right: 0
+	&_navigation
+		padding: 24% 0 16%
+		overflow-y: auto
+		&-line
+			display: block
+			& + &
+				margin-top: 25%
+		&-link
+			cursor: pointer
+			text-decoration: none
+			text-transform: uppercase
+			font-size: 24px
+			color: $white
+			&:hover
+				color: $venetian-red
+			+min-screen($hdpi)
+				font-size: 1.5vw
