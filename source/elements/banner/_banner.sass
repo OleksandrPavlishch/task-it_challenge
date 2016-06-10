@@ -8,13 +8,7 @@
 		@extend .slider
 		height: 100%
 		&-wrap
-			// position: absolute
-			// width: 100%
 			height: 100%
-			// left: 0
-			// top: 0
-		// div:not(.owl-controls)
-		// 	height: 100%
 		.owl-stage-outer,
 		.owl-stage,
 		.owl-item
@@ -100,9 +94,9 @@
 		.owl-item
 			transition: transform .6s ease
 			+max-screen($tablet)
-				transform: scale(0.9);
+				transform: scale(.9);
 				&.active.center
-					transform: scale(1);
+					transform: scale(.95);
 		&-item
 			height: 100%
 			position: relative
