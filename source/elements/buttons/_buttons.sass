@@ -56,5 +56,25 @@
 	padding-right: 61px
 	.icon
 		margin-left: 11px
+		animation: 3.4s ease-in infinite fadebottom
 	&:hover
 		border-color: $white
+
+
+
+@keyframes fadebottom
+	0%
+		opacity: 1
+		transform: translateY(0px)
+	25%
+		opacity: 0
+		transform: translateY(15px)
+	30%
+		opacity: 0
+		transform: translateY(0px)
+	45%
+		opacity: 1
+		transform: translateY(0px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
