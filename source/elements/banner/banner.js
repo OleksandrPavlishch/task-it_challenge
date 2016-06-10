@@ -2,7 +2,42 @@
 (function () {
 	var $bannerSlider = $(".banner_slider")
 	, $bannerSliderPrevButton = $(".banner_slider-prev-button")
-	, $bannerSliderNextButton = $(".banner_slider-next-button");
+	, $bannerSliderPrevButtonPreviewImage = $bannerSliderPrevButton.find('.banner_slider-button-preview-image')
+	, $bannerSliderPrevButtonPreviewName = $bannerSliderPrevButton.find('.banner_slider-button-preview-text-name')
+	, $bannerSliderPrevButtonPreviewTitle = $bannerSliderPrevButton.find('.banner_slider-button-preview-text-title')
+	, $bannerSliderNextButton = $(".banner_slider-next-button")
+	, $bannerSliderNextButtonPreviewImage = $bannerSliderNextButton.find('.banner_slider-button-preview-image')
+	, $bannerSliderNextButtonPreviewName = $bannerSliderNextButton.find('.banner_slider-button-preview-text-name')
+	, $bannerSliderNextButtonPreviewTitle = $bannerSliderNextButton.find('.banner_slider-button-preview-text-title');
+
+
+
+	var changeArrowPreview = function (event) {
+		var $this = $(event.target).find('.active')
+		, $prev = $this.prev()
+		, $next = $this.next()
+		, prevImageUrl = $prev.find('.banner_slider-item-image').data('bg-image-url')
+		, nextImageUrl = $next.find('.banner_slider-item-image').data('bg-image-url')
+		, prevHeader = $prev.find('.banner_slider-item-text-header').text()
+		, nextHeader = $next.find('.banner_slider-item-text-header').text()
+		, prevTitle = $prev.find('.banner_slider-item-text-title').text()
+		, nextTitle = $next.find('.banner_slider-item-text-title').text();
+
+
+		$bannerSliderPrevButtonPreviewImage.css('background-image', 'url("' + prevImageUrl + '")');
+		$bannerSliderPrevButtonPreviewName.text(prevHeader);
+		$bannerSliderPrevButtonPreviewTitle.text(prevTitle);
+		$bannerSliderNextButtonPreviewImage.css('background-image', 'url("' + nextImageUrl + '")');
+		$bannerSliderNextButtonPreviewName.text(nextHeader);
+		$bannerSliderNextButtonPreviewTitle.text(nextTitle);
+
+		console.log(nextImageUrl);
+		console.log(prevImageUrl);
+		console.log(nextHeader);
+		console.log(prevHeader);
+		console.log(nextTitle);
+		console.log(prevTitle);
+	};
 
 	$bannerSlider.owlCarousel({
 		items: 1
@@ -11,6 +46,8 @@
 		, center: true
 		, loop: true
 		, navText: ''
+		, onInitialized: changeArrowPreview
+		, onTranslated: changeArrowPreview
 		, responsive: {
 			1026: {
 				items: 1

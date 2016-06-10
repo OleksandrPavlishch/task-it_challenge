@@ -21,17 +21,78 @@
 			height: 100%
 		&-prev-button,
 		&-next-button
-			width: 66px
-			height: 66px
-			margin-top: -33px
-			line-height: 66px
-			font-size: 28px
+			position: absolute
+			top: 50%
+			height: 80px
+			margin-top: -40px
+			z-index: 3
 			+max-screen($tablet)
 				display: none
+			&-arrow
+				width: 66px
+				height: 66px
+				margin-top: -33px
+				line-height: 66px
+				font-size: 28px
+			&:hover &-arrow
+				background-color: $nero-gray
+				color: $white
 		&-prev-button
-			@extend %default-prev-slider-button-reverse-color
+			left: 0
+			&-arrow
+				@extend %default-prev-slider-button-reverse-color
 		&-next-button
-			@extend %default-next-slider-button-reverse-color
+			right: 0
+			&-arrow
+				@extend %default-next-slider-button-reverse-color
+
+		
+		&-button-preview
+			background-color: $nero
+			height: 100%
+			position: relative
+			width: $banner-slider-button-preview-width
+			cursor: pointer
+			overflow: hidden
+			.disabled + &
+				display: none
+			&-image
+				position: absolute
+				top: 0
+				height: 100%
+				width: $banner-slider-button-preview-width
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: cover
+			&-text
+				vertical-align: middle
+				padding: 20px 15px
+				&-name
+					+text-overflow
+					font-size: 12px
+					text-transform: uppercase
+					margin-bottom: 5px
+					color: $white
+				&-title
+					+text-overflow
+					font-size: 14px
+					color: $nobel
+		&-prev-button &-button-preview
+			padding-left: $banner-slider-button-preview-arrow-padding
+			text-align: right
+			padding-right: $banner-slider-button-preview-image-width
+			margin-left: -$banner-slider-button-preview-width
+			&-image
+				right: 0
+		&-next-button &-button-preview
+			padding-right: $banner-slider-button-preview-arrow-padding
+			text-align: left
+			padding-left: $banner-slider-button-preview-image-width
+			margin-right: -$banner-slider-button-preview-width
+			&-image
+				left: 0
+
+
 		.owl-item
 			transition: transform .6s ease
 			+max-screen($tablet)
@@ -60,9 +121,9 @@
 			&-text
 				position: absolute
 				z-index: 2
-				width: 50%
+				width: 65%
 				text-align: center
-				height: 38%
+				height: 31%
 				top: 0
 				bottom: 0
 				right: 0

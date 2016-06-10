@@ -1,7 +1,11 @@
 {
 	"baner": {
 		"header": "Project Title #"
-		, "title": "A creative agency that crafts innovative ideas into digital products!"
+		, "title": [
+			"A creative agency that crafts innovative ideas into digital products!"
+			, "Printing, Grahic Design"
+			, "Web site, e-commerce"
+		]
 		, "button_text": "Get started now"
 	}
 	, "projects": {
