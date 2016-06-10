@@ -11,8 +11,13 @@
 	z-index: 10
 	margin-right: -35%
 	transition: all .4s ease
+	+max-screen($tablet)
+		width: 50%
+		margin-right: -50%
 	+max-screen($mobile)
 		padding-top: $mobile-header-height
+		width: 100%
+		margin-right: -100%
 	+landscape-max-screen($mobile)
 		padding-top: $mobile-landscape-header-height
 	.is-menu-show &
@@ -20,10 +25,23 @@
 	&_navigation
 		padding: 24% 0 16%
 		overflow-y: auto
+		height: 100%
+		+max-screen($mobile)
+			height: auto
+		+landscape-max-screen($mobile)
+			padding: 4% 0 0
+			width: 50%
+			display: inline-block
 		&-line
 			display: block
 			& + &
 				margin-top: 25%
+				+landscape-max-screen($tablet)
+					margin-top: 15%
+				+max-screen($mobile)
+					margin-top: 10%
+				+landscape-max-screen($mobile)
+					margin-top: 4%
 		&-link
 			cursor: pointer
 			text-decoration: none
@@ -34,3 +52,7 @@
 				color: $venetian-red
 			+min-screen($hdpi)
 				font-size: 1.5vw
+	+landscape-max-screen($mobile)
+		.social-buttons
+			float: right
+			margin-top: 4%
