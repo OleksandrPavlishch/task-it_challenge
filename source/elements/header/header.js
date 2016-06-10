@@ -10,7 +10,6 @@
 		}
 
 		window.onscroll = function() {
-				console.log(window.innerHeight/5);
 			var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 			if(scrolled > window.innerHeight/5){
 				body.classList.add(scrollClass);

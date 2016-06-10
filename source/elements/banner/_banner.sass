@@ -4,6 +4,11 @@
 	position: relative
 	+max-screen($tablet)
 		margin-bottom: 30px
+		padding-top: $default-header-height
+	+max-screen($mobile)
+		padding-top: $mobile-header-height
+	+landscape-max-screen($mobile)
+		padding-top: $mobile-landscape-header-height
 	&_slider
 		@extend .slider
 		height: 100%
