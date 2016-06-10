@@ -1,5 +1,10 @@
 {
-	"projects": {
+	"baner": {
+		"header": "Project Title #"
+		, "title": "A creative agency that crafts innovative ideas into digital products!"
+		, "button_text": "Get started now"
+	}
+	, "projects": {
 		"header": "our best projects"
 		, "title": "We are a full-service cretive studio delivering any kind of visual content and digital solutions"
 		, "slider":{

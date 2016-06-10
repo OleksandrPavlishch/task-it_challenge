@@ -1,2 +1,14 @@
 section.banner#banner
-	
+	.banner_slider-wrap
+		.banner_slider-prev-button
+		.banner_slider-next-button
+		.banner_slider
+			- for (var i = 0; i < 10; ++i)
+				.banner_slider-item
+					.banner_slider-item-image(style='background-image: url("img/banner-image.jpg")')
+						//- +insert-image('banner-image.jpg', projects.slider.name[i%4])
+					.banner_slider-item-text
+						h1.banner_slider-item-text-header=baner.header+(1+i)
+						p.banner_slider-item-text-title=baner.title
+						a.button_start(href="#projects")=baner.button_text
+							em.icon.icon-arrow-down
